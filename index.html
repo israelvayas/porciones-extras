@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Insumos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        #searchInput {
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Buscar por nombre...">
+
+    <table id="insumosTable">
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Observación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí van las filas de la tabla -->
+            <tr>
+                <td>ACIDO FLUORHIDRICO/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$1.20</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ACIDO FOSFORICO 37%/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$1.00</td>
+                <td>ortofostórico</td>
+            </tr>
+            <tr>
+                <td>ACRILICO LIQUIDO/PORCION EXTRA</td>
+                <td>37.5 ml</td>
+                <td>$1.00</td>
+                <td>monómero</td>
+            </tr>
+            <tr>
+                <td>ACRILICO POLVO COLOR 62/PORCION EXTRA</td>
+                <td>9 gr</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ACRILICO POLVO ROSADO/PORCION EXTRA</td>
+                <td>28 gr</td>
+                <td>$1.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ACRILICO POLVO TRANSPARENTE/PORCION EXTRA</td>
+                <td>28 gr</td>
+                <td>$1.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>AGUJA CORTA/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.15</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>AGUJA LARGA/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.15</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>AGUJA PEDIÁTRICA/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.10</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ALCOHOL ANTICEPTICO /PORCION EXTRA</td>
+                <td>5 splash</td>
+                <td>$0.15</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ALGINATO/PORCION EXTRA</td>
+                <td>28gr</td>
+                <td>$3.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>APLICADOR MICROBRUSH/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.04</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>BANDA MATRIZ/PORCION EXTRA</td>
+                <td>5 cm</td>
+                <td>$0.15</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>BIODENTIN/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$5.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>BISACRYL / PORCION COMPLETA/PORCION EXTRA</td>
+                <td>1 cm</td>
+                <td>$13.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>BISACRYL / MEDIA PORCION/PORCION EXTRA</td>
+                <td>0.5 cm</td>
+                <td>$6.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CAMPO DE OJO/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$1.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CAVIT G/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$1.00</td>
+                <td>coltosol u obtur</td>
+            </tr>
+            <tr>
+                <td>CAVITY LINNER/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$2.00</td>
+                <td>ionomero de fotocurado</td>
+            </tr>
+            <tr>
+                <td>CEMENTO HPLUS/PORCION EXTRA</td>
+                <td>2.5 cm</td>
+                <td>$14.00</td>
+                <td>Cemento de obturacion o cemento de endodoncia</td>
+            </tr>
+            <tr>
+                <td>CEPILLO PROFILACTICO/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CERA BASE/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.52</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CERA ENCAJONADO/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.52</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CERA RODETE/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.52</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CERA UTILITY/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.52</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CLINPRO FLUOR BARNIZ/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$4.70</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CLIP F/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$5.00</td>
+                <td>YA NO HAY EN SU LUGAR ESTA EL IVOCLAR</td>
+            </tr>
+            <tr>
+                <td>CLORHEXIDINA VASO/PORCION EXTRA</td>
+                <td>1 vaso</td>
+                <td>$1.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CLORHEXIDINA SPLASH/PORCION EXTRA</td>
+                <td>1 splash</td>
+                <td>$0.15</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CONO ACCESORIO ABCD/PORCION EXTRA</td>
+                <td>10</td>
+                <td>$4.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CONOS DE GUTAPERCHA 15-40/PORCION EXTRA</td>
+                <td>10</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CONOS DE GUTAPERCHA 45-80/PORCION EXTRA</td>
+                <td>2</td>
+                <td>$0.15</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CONOS DE PAPEL 15-40/PORCION EXTRA</td>
+                <td>10</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CONOS DE PAPEL 45-80/PORCION EXTRA</td>
+                <td>2</td>
+                <td>$0.15</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>COPA PROFILACTICA/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.25</td>
+                <td>COPA DE CAUCHO</td>
+            </tr>
+            <tr>
+                <td>COTONETE - HISOPO/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.04</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CUBETA/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.30</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>CUÑAS/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.25</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>DETARTROL/PORCION EXTRA</td>
+                <td>10 gotas</td>
+                <td>$0.25</td>
+                <td>SIN EXISTENCIA</td>
+            </tr>
+            <tr>
+                <td>DIQUE DE GOMA/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.30</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>DYCAL/PORCION EXTRA</td>
+                <td>1 cm</td>
+                <td>$1.50</td>
+                <td>CEMENTO PROVISIONAL</td>
+            </tr>
+            <tr>
+                <td>EDTA/PORCION EXTRA</td>
+                <td>10 gotas</td>
+                <td>$1.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>EDTA GEL/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$2.00</td>
+                <td>NO HAY</td>
+            </tr>
+            <tr>
+                <td>ENJUAGE/PORCION EXTRA</td>
+                <td>7 splash</td>
+                <td>$0.40</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>EUGENOL/PORCION EXTRA</td>
+                <td>4 gotas</td>
+                <td>$0.25</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>EYECTOR DE SALIVA/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.10</td>
+                <td>SUCCION NORMAL</td>
+            </tr>
+            <tr>
+                <td>EYECTOR QUIRURGICO/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.25</td>
+                <td>SUCCION QUIRURGICA PLASTICA</td>
+            </tr>
+            <tr>
+                <td>FLUOR/PORCION EXTRA</td>
+                <td>6.5 ml</td>
+                <td>$0.15</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>FORMOCRESOL/PORCION EXTRA</td>
+                <td>3 gotas</td>
+                <td>$0.25</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>GASAS/PORCION EXTRA</td>
+                <td>6</td>
+                <td>$0.75</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>GODIVA/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>HEMOSTATICO/PORCION EXTRA</td>
+                <td>5 gotas</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>HIDROXIDO DE CALCIO EN JERINGA/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$1.25</td>
+                <td>SIN EXISTENCIA</td>
+            </tr>
+            <tr>
+                <td>HIDROXIDO DE CALCIO EN POLVO/PORCION EXTRA</td>
+                <td>1 CUCHARA</td>
+                <td>$0.25</td>
+                <td>HIDROXIDO DE CALCIO PURO</td>
+            </tr>
+            <tr>
+                <td>HILO DE SUTURA/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$3.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>HILO DENTAL</td>
+                <td>30 cm</td>
+                <td>$0.05</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>HILO RETRACTOR/PORCION EXTRA</td>
+                <td>5cm</td>
+                <td>$0.60</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>HIPOCLORITO/PORCION EXTRA</td>
+                <td>1 vaso</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>HOJA DE BISTURI/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.25</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>IONOBOND/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$5.25</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>JERINGUILLA/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.25</td>
+                <td>JERINGA</td>
+            </tr>
+            <tr>
+                <td>KETAC CEM/PORCION EXTRA</td>
+                <td>1 cuchara</td>
+                <td>$3.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>KETAC MOLAR O UNIVERSAL/PORCION EXTRA</td>
+                <td>1 cuchara</td>
+                <td>$1.50</td>
+                <td>IONOMERO DE AUTOCURADO</td>
+            </tr>
+            <tr>
+                <td>ANESTESICO CON VASO LIDOCAINA /PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>LIJA INTERPROXIMAL ABRASIVA DE METAL/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.50</td>
+                <td>LIJA DE METAL</td>
+            </tr>
+            <tr>
+                <td>LIJA DE POLIESTER/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.15</td>
+                <td>LIJA DE PAPEL</td>
+            </tr>
+            <tr>
+                <td>MAXITROL/PORCION EXTRA</td>
+                <td>3 gotas</td>
+                <td>$1.15</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ANESTESICO SIN VASO MEPIVACAINA/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.60</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>OBTUR/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$0.25</td>
+                <td>SIN EXISTENCIA</td>
+            </tr>
+            <tr>
+                <td>OXIDO DE ZINC/PORCION EXTRA</td>
+                <td>1 gr</td>
+                <td>$0.10</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>PAPEL ARTICULAR/PORCION EXTRA</td>
+                <td>1 tiras</td>
+                <td>$0.10</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>PARAMONO/PORCION EXTRA</td>
+                <td>3 gotas</td>
+                <td>$0.20</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>PASTA LIVIANA DE ADICION/PORCION EXTRA</td>
+                <td>2 cm</td>
+                <td>$6.00</td>
+                <td>PASTA DE PISTOLA</td>
+            </tr>
+            <tr>
+                <td>PASTA PESADA DE ADICION/PORCION EXTRA</td>
+                <td>1 cuchara de c/u</td>
+                <td>$6.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>PASTA PROFILACTICA/PORCION EXTRA</td>
+                <td>5.2 gr</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>PASTA PESADA DE CONDENSACION + ACTIVADOR SPEEDEX/P</td>
+                <td>2 CUCHARAS</td>
+                <td>$1.25</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>PASTA LIVIANA DE CONDENSACION + ACTIVADOR SPEEDEX/P</td>
+                <td>2 RAYAS DE 15 CM</td>
+                <td>$6.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>PERNO DE FIBRA/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$10.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>PIEDRA POMEZ/PORCION EXTRA</td>
+                <td>3gr</td>
+                <td>$0.10</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>RADIOGRAFÍA PERIAPICAL/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>RELYX/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$16.00</td>
+                <td>ALLCEM O CEMENTO DUAL O RESINA DUAL</td>
+            </tr>
+            <tr>
+                <td>RESINA/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$1.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>RESINA FLUIDA/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>REVELADOR DE CARIES/PORCION EXTRA</td>
+                <td>3 gotas</td>
+                <td>$0.50</td>
+                <td>DETECTOR DE CARIES</td>
+            </tr>
+            <tr>
+                <td>REVELADOR DE PLACA/PORCION EXTRA</td>
+                <td>3 gotas</td>
+                <td>$0.25</td>
+                <td>DETECTOR DE PLACA</td>
+            </tr>
+            <tr>
+                <td>SELLANTE/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$5.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>SILANO/PORCION EXTRA</td>
+                <td>2 gotas</td>
+                <td>$5.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>SINGLE BOND ADHESIVO UNIVERSAL/PORCION EXTRA</td>
+                <td>2 gotas</td>
+                <td>$1.50</td>
+                <td>ADHESIVO DE RESINA O BONDI</td>
+            </tr>
+            <tr>
+                <td>SOLVENTE DE GUTAPERCHA (EUCALIPTOL)/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$0.50</td>
+                <td>XILOL</td>
+            </tr>
+            <tr>
+                <td>SUERO FISIOLOGICO/PORCION EXTRA</td>
+                <td>1 vaso</td>
+                <td>$0.25</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>TEMP BOND/PORCION EXTRA</td>
+                <td>1.5 cm</td>
+                <td>$2.00</td>
+                <td>SIN EXISTENCIA</td>
+            </tr>
+            <tr>
+                <td>THERACAL/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$3.00</td>
+                <td>PROTECTOR PULPAR EN JERINGA</td>
+            </tr>
+            <tr>
+                <td>TIRA DE CELULOIDE/PORCION EXTRA</td>
+                <td>1</td>
+                <td>$0.10</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>TOP DAM/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$1.60</td>
+                <td>BARRERA GINGIVAL</td>
+            </tr>
+            <tr>
+                <td>ANESTESICO TOPICO EN GEL TOPICAINA/PORCION EXTRA</td>
+                <td>1 gr</td>
+                <td>$0.30</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>TORUNDAS DE ALGODON ROLLO/PORCION EXTRA</td>
+                <td>50 (rollo pequeño)</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>TORUNDAS DE ALGODON 10 U/ PORCION EXTRA</td>
+                <td>10 unidades</td>
+                <td>$0.10</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>UFIGEL/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$17.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>VASELINA/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$0.04</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>VITREBOND/PORCION EXTRA</td>
+                <td>PORCION</td>
+                <td>$6.50</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>YESO AMARILLO/PORCION EXTRA</td>
+                <td>150 gr</td>
+                <td>$0.75</td>
+                <td>YESO TIPO 3</td>
+            </tr>
+            <tr>
+                <td>YESO BLANCO/PORCION EXTRA</td>
+                <td>120 gr</td>
+                <td>$2.80</td>
+                <td>YESO TIPO 2 O PARA ARTICULADOR</td>
+            </tr>
+            <tr>
+                <td>YESO ROSADO/PORCION EXTRA</td>
+                <td>160 gr</td>
+                <td>$1.00</td>
+                <td>YESO TIPO 4</td>
+            </tr>
+            <tr>
+                <td>ANESTESICO EN SPRAY ZEYCO/PORCION EXTRA</td>
+                <td>5 splash</td>
+                <td>$0.50</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var table = document.getElementById('insumosTable');
+            var rows = table.getElementsByTagName('tr');
+            
+            for (var i = 1; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName('td');
+                var match = false;
+                
+                for (var j = 0; j < cells.length; j++) {
+                    if (cells[j].textContent.toLowerCase().includes(input)) {
+                        match = true;
+                        break;
+                    }
+                }
+                
+                if (match) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
